@@ -10,8 +10,6 @@ const base = mode === "production" ? "/" + path.basename(process.cwd()) + "/" : 
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base,
-  mode,
   plugins: [vue()],
   resolve: {
     alias: {

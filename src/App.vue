@@ -3,7 +3,7 @@ import ClockComponent from '@/components/ClockComponent.vue'
 </script>
 
 <template>
-    <ClockComponent efect="Not match Efect"/>
+
     <ClockComponent efect="opacity"/>
     <ClockComponent efect="flip"/>
     <ClockComponent efect="cubeX"/>
