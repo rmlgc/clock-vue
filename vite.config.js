@@ -3,9 +3,11 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const isGitHubPages = true;
+
 const path = require("path");
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
-const base = mode === "production" ? "/" + path.basename(process.cwd()) + "/" : "/";
+const base = mode === "production" && isGitHubPages ? "/" + folderName : "/";
 
 
 // https://vitejs.dev/config/
