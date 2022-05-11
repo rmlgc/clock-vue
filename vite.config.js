@@ -3,16 +3,16 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-const isGitHubPages = true;
 
+const isGitHubPages = true;
 const path = require("path");
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
-const base = mode === "production" && isGitHubPages ? "/" + folderName : "/";
+const base = mode === "production" && isGitHubPages  ? "/" + path.basename(process.cwd()) + "/" : "/";
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:"/",
+  base,
   mode,
   plugins: [vue()],
   resolve: {
